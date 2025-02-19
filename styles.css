@@ -1,8 +1,107 @@
+:root {
+    --primary-color: #f39c12;
+    --secondary-color: #222;
+    --text-color: #333;
+    --background-color: #f39c12;
+    --card-bg: #e9e3e3f3;
+}
+
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8e913;
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
 }
-h1 {
-    color: #ff5e01;
+
+header {
+    background: var(--secondary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.projects {
+    padding: 50px 20px;
+    background: white;
+    text-align: center;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.contact {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
 }
